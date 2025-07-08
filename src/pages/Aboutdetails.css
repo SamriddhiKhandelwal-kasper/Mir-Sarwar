@@ -1,0 +1,146 @@
+/* At the top of Aboutdetails.css */
+@import url('https://fonts.googleapis.com/css2?family=Fustat&display=swap');
+
+.details{
+    position:relative;
+    padding:3rem 2rem;
+}
+.details-image img{
+    width: 100%;
+}
+.details-image h1 {
+  position: absolute;
+  top: 15%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 80px;
+  color: #FFFFFF;
+}
+.verticall-lines {
+  display: flex;
+  position: absolute;
+  width: 3px;
+  height: 3%;
+  top: 38.8%;
+  left: 1.5%;
+  background-color: #9D2925;
+}
+.verticalll-lines {
+  display: flex;
+  position: absolute;
+  width: 3px;
+  height: 3%;
+  top: 52.6%;
+  left: 1.5%;
+  background-color: #E6241E;
+}
+.verticallll-lines {
+  display: flex;
+  position: absolute;
+  width: 3px;
+  height: 3%;
+  top: 71%;
+  left: 1.5%;
+  background-color: #E6241E;
+}
+.verticallll4-lines {
+  display: flex;
+  position: absolute;
+  width: 3px;
+  height: 3%;
+  top: 84%;
+  left: 1.5%;
+  background-color: #8F1614;
+}
+.details-text p{
+    margin-right: 4rem;
+}
+.details-text p span{
+    color:#E6241E;
+    font-family: 'Fustat', sans-serif;
+}
+.details-text h3{
+    font-size: 25px;
+}
+
+.details-text h2{
+    background: linear-gradient(#FFFFFF, #ED0A0A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.color-change{
+    color:#F56845;
+}
+.para-color {
+    margin-top: 0%;
+}
+.para-color p span{
+    color:#696969;
+}
+@media (max-width: 768px) {
+  .details {
+    padding: 2rem 1rem;
+  }
+
+  .details-image h1 {
+    top: 10%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .details-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .details-text {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .details-text p {
+    margin-right: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .details-text h2,
+  .details-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .verticall-lines,
+  .verticalll-lines,
+  .verticallll-lines,
+  .verticallll4-lines {
+    display: none; /* Hide decorative vertical lines on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .details-image h1 {
+    font-size: 28px;
+    top: 8%;
+    left:50%;
+  }
+
+  .details-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .details-text p {
+    font-size: 0.9rem;
+  }
+  .verticall-lines,
+  .verticalll-lines,
+  .verticallll-lines,
+  .verticallll4-lines {
+    display: none; /* Hide decorative vertical lines on small screens */
+  }
+}

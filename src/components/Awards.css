@@ -1,0 +1,115 @@
+.awards {
+  position: relative;
+  padding: 3rem 2rem;
+}
+
+.awards-text {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.awards-text h2 {
+  font-size: 2rem;
+  background: linear-gradient(#FFFFFF, #E22222);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.awards-text h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.underline {
+  width: 15%;
+  height: 3px;
+  background-color: #80221F;
+  margin: 0 auto;
+  border-radius: 1px;
+  margin-bottom: 1rem;
+}
+
+.awards-text p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.awards-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.7rem;
+  padding: 0 2rem;
+}
+
+.cards {
+  background-color: #242424;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.cards:hover {
+  transform: translateY(-5px);
+}
+
+.awards-cards h2 {
+  background: linear-gradient(to right, #FFFFFF, #BE1B1B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cards p {
+  font-size: 0.95rem;
+  margin: 0.2rem 0;
+  margin-left: 2rem;
+}
+
+.cards-icon,
+.cards-icons {
+  color: #E3AC27;
+}
+
+.section-seperators {
+  width: 100%;
+  height: 1.5px;
+  margin: 3rem auto 0 auto;
+  background: #FFFBFB;
+  border-radius: 1px;
+  opacity: 0.6;
+}
+
+/* ============================
+   ✅ MOBILE RESPONSIVE STYLES
+   ============================ */
+@media (max-width: 768px) {
+  .awards-text h1 {
+    font-size: 2rem;
+  }
+
+  .awards-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .awards-cards {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .cards {
+    padding: 1rem;
+  }
+
+  .cards p {
+    margin-left: 1rem;
+  }
+}
