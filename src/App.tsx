@@ -7,9 +7,7 @@ import Awards from './components/Awards.tsx';
 import Showreel from './components/Showreel.tsx';
 import Mystory from './components/Mystory.tsx';
 import Aboutdetails from './pages/Aboutdetails.tsx';
-
-// project folder
-import Project from './components/project/App';   // ✅ renamed here
+import Project from './components/Project/App.jsx';
 
 // Project 3 (media) components
 import Hero from './components/project3/Hero';
@@ -18,7 +16,7 @@ import { movieGenres, seriesGenres, trendingContent, moviesContent, seriesConten
 
 const App: React.FC = () => {
   const [currentHero, setCurrentHero] = useState(0);
-  
+
   return (
     <Router>
       <Navbar />
@@ -30,38 +28,41 @@ const App: React.FC = () => {
             <Awards />
             <Showreel />
             <Mystory />
-            <Project />  {/* ✅ rendered after Mystory */}
-            
-            {/* Project 3 Media Content */}
-            <div className="min-h-screen bg-black text-white">
-              <Hero 
-                content={heroContent[currentHero]} 
-                onNext={() => setCurrentHero((prev) => (prev + 1) % heroContent.length)}
-                onPrev={() => setCurrentHero((prev) => (prev - 1 + heroContent.length) % heroContent.length)}
-              />
-              <div className="px-4 md:px-8 lg:px-12 space-y-12 pb-12">
-                <ContentSection 
-                  title="Trending" 
-                  content={trendingContent}
-                  showSeeMore={true}
-                />
-                <ContentSection 
-                  title="Movies" 
-                  content={moviesContent}
-                  genres={movieGenres}
-                  showSeeMore={true}
-                />
-                <ContentSection 
-                  title="Series" 
-                  content={seriesContent}
-                  genres={seriesGenres}
-                  showSeeMore={true}
-                />
-              </div>
-            </div>
+            <Project /> 
           </>
         } />
+        
         <Route path="/about-details" element={<Aboutdetails />} />
+
+        
+        <Route path="/filmography" element={
+          <div className="min-h-screen bg-black text-white">
+            <Hero 
+              content={heroContent[currentHero]} 
+              onNext={() => setCurrentHero((prev) => (prev + 1) % heroContent.length)}
+              onPrev={() => setCurrentHero((prev) => (prev - 1 + heroContent.length) % heroContent.length)}
+            />
+            <div className="px-4 md:px-8 lg:px-12 space-y-12 pb-12">
+              <ContentSection 
+                title="Trending" 
+                content={trendingContent}
+                showSeeMore={true}
+              />
+              <ContentSection 
+                title="Movies" 
+                content={moviesContent}
+                genres={movieGenres}
+                showSeeMore={true}
+              />
+              <ContentSection 
+                title="Series" 
+                content={seriesContent}
+                genres={seriesGenres}
+                showSeeMore={true}
+              />
+            </div>
+          </div>
+        }/>
       </Routes>
     </Router>
   );

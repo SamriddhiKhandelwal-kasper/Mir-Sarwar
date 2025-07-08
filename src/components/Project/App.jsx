@@ -206,7 +206,7 @@ const latestMovies = [
       <div className="border-t border-gray-800 w-full"></div>
 
       {/* Gallery Section */}
-      <section className="py-16 px-8 bg-black">
+      <section className="py-16 px-8 bg-black" id="gallery">
         <div className="max-w-6xl mx-auto text-center">
           <span className="text-red-500 text-xs font-semibold tracking-widest uppercase">Captured Moments</span>
           <h2 className="text-4xl font-bold mt-2 mb-4 uppercase">Gallery</h2>
@@ -240,7 +240,7 @@ const latestMovies = [
       <div className="border-t border-gray-800 w-full"></div>
 
       {/* News Section */}
-      <section className="py-16 px-8 bg-black">
+      <section className="py-16 px-8 bg-black" id="news">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-red-500 text-xs font-semibold tracking-widest uppercase">News</span>
@@ -333,7 +333,7 @@ const latestMovies = [
       <div className="border-t border-gray-800 w-full"></div>
 
       {/* Contact Section */}
-      <section className="py-16 px-8 bg-black">
+      <section className="py-16 px-8 bg-black" id="contact">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-red-500 text-xs font-semibold tracking-widest uppercase">Let's Connect</span>
